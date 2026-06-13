@@ -1,0 +1,114 @@
+:root {
+  color: #16213a;
+  background: #f7f2e8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  background: #12355b;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+button.active {
+  background: #f2c14e;
+  color: #16213a;
+}
+
+.shell {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 2rem;
+}
+
+.hero,
+.panel,
+.card {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(18, 53, 91, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 18px 48px rgba(18, 53, 91, 0.12);
+  padding: 1.5rem;
+}
+
+.hero {
+  background: linear-gradient(135deg, #12355b, #1f6f8b);
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 0.95;
+  margin: 0 0 1rem;
+}
+
+.eyebrow,
+.status {
+  color: #d97706;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card h2,
+.panel h2 {
+  margin-top: 0;
+}
+
+.theory,
+.feedback {
+  background: #fff7d6;
+  border-radius: 18px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.exercise label {
+  display: grid;
+  font-weight: 700;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.exercise input {
+  border: 1px solid rgba(18, 53, 91, 0.22);
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  width: min(100%, 28rem);
+}

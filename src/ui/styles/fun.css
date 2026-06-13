@@ -1,0 +1,178 @@
+/* Capa visual de la experiencia divertida de MateVentura. */
+
+.muted { color: #5a6b82; }
+.muted.small, .small { font-size: 0.9rem; }
+.tiny { font-size: 0.78rem; color: #6b7a90; margin: 0.25rem 0; }
+
+.link-button, .ghost-button {
+  background: transparent;
+  color: #12355b;
+  padding: 0.5rem 0.75rem;
+}
+.ghost-button {
+  border: 1px solid rgba(18, 53, 91, 0.25);
+}
+.primary-button {
+  background: #12355b;
+  margin-top: 0.5rem;
+}
+.big-button {
+  background: #f2c14e;
+  color: #16213a;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 0.85rem 1.4rem;
+  margin-top: 0.75rem;
+  box-shadow: 0 6px 0 #d9a52f;
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+.big-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #d9a52f;
+}
+
+/* Hero */
+.hero-fun h1 {
+  background: linear-gradient(90deg, #ffe29a, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub { font-size: 1.05rem; max-width: 46rem; opacity: 0.95; }
+.hero-fun label { display: block; margin-top: 1rem; font-weight: 700; }
+.celebrate { animation: pop 0.5s ease; }
+@keyframes pop {
+  0% { transform: scale(0.96); opacity: 0; }
+  60% { transform: scale(1.02); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Barra de jugadora */
+.player-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: linear-gradient(135deg, #eef6ff, #fff);
+}
+.level-badge {
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #12355b, #1f6f8b);
+  color: #fff;
+  flex-shrink: 0;
+}
+.level-emoji { font-size: 1.8rem; line-height: 1; }
+.level-num { font-size: 0.8rem; font-weight: 800; }
+.level-info { flex: 1; min-width: 0; }
+.level-title { margin: 0 0 0.4rem; font-weight: 700; }
+.xp-track {
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(18, 53, 91, 0.12);
+  overflow: hidden;
+}
+.xp-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f2c14e, #f59e0b);
+  transition: width 0.5s ease;
+}
+
+/* Reto del día */
+.daily-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #fff3cf, #ffe7a8);
+}
+.daily-card.done { background: linear-gradient(135deg, #d7f5e0, #b6ecc8); }
+.daily-title { margin: 0.25rem 0; }
+
+.fun-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #ffe1ec, #e7dcff);
+}
+
+/* Tarjetas */
+.fun-card { display: flex; flex-direction: column; }
+.fun-card .primary-button { margin-top: auto; }
+.emoji-row { font-size: 1.6rem; letter-spacing: 0.15rem; margin-bottom: 0.4rem; }
+
+/* Jugar */
+.play-top { gap: 0.5rem 1rem; }
+.statement { font-size: 1.4rem; line-height: 1.35; }
+.streak { font-weight: 700; color: #b45309; }
+.hints {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: #475569;
+}
+.hints li { margin: 0.25rem 0; }
+.feedback h3 { margin-top: 0; }
+.feedback.ok { animation: pop 0.4s ease; }
+
+/* Logros */
+.ach-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.ach {
+  border-radius: 16px;
+  padding: 0.85rem;
+  text-align: center;
+  border: 1px solid rgba(18, 53, 91, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.ach.got { background: #fff7d6; }
+.ach.locked { background: #f1f5f9; opacity: 0.7; }
+.ach-emoji { font-size: 1.8rem; }
+.ach-title { font-weight: 800; font-size: 0.9rem; }
+.ach-desc { font-size: 0.74rem; color: #64748b; }
+
+/* Toasts de logro */
+.toast-stack {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 50;
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #16213a;
+  color: #fff;
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  animation: slidein 0.35s ease;
+  max-width: 320px;
+}
+.toast-emoji { font-size: 1.6rem; }
+@keyframes slidein {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 540px) {
+  .shell { padding: 1rem; }
+  .statement { font-size: 1.2rem; }
+  .player-bar { gap: 0.75rem; }
+  .level-badge { width: 64px; height: 64px; }
+}
