@@ -29,7 +29,7 @@ el HTML portable y publicar.
 ## Pasos exactos
 
 1. **Ubícate y orienta el contexto**
-   - `cd 20_PROYECTOS_REF/MateVentura`
+   - Sitúate en la raíz del repositorio de MateVentura (p. ej. `cd C:\Users\anton\Documents\MateVentura`).
    - Lee `src/content/funChallenges.json`: anota los `id` ya usados (para no repetir)
      y los `tag`/temas recientes (para variar).
 
@@ -78,8 +78,8 @@ el HTML portable y publicar.
    git commit -m "MateVentura: autocompletado de retos divertidos (+N)"
    git push
    ```
-   El `git push` dispara el workflow `mateventura-deploy.yml` y la web online se
-   actualiza sola en unos minutos.
+   El `git push` a `origin` (cives/mateventura) dispara el workflow `deploy.yml`
+   del propio repo (GitHub Pages) y la web online se actualiza sola en unos minutos.
 
 6. **Cierra** con un resumen de una línea: cuántos retos nuevos, de qué temas, y
    el total actual del banco.
@@ -92,7 +92,7 @@ Pídeselo a Claude Code con el skill de agendado, por ejemplo:
 
 > «Programa una rutina semanal los lunes a las 8:00 que ejecute la rutina de
 > autocompletado de MateVentura descrita en
-> `20_PROYECTOS_REF/MateVentura/scripts/RUTINA_AUTOCOMPLETADO.md`.»
+> `scripts/RUTINA_AUTOCOMPLETADO.md`.»
 
 o con `/schedule`. La rutina es idempotente y segura: si los tests no pasan, no
 publica nada.
