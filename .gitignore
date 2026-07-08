@@ -7,3 +7,7 @@ coverage/
 .env
 .env.*
 __pycache__/
+
+# Documentos privados locales (docs internos, PDFs, currículo, auditorías…):
+# se conservan junto al proyecto pero NUNCA se publican en el repo.
+_privado/
