@@ -45,10 +45,10 @@ Banco de problemas de la vida real (móvil, gaming, Feria, conciertos, fútbol�
 
 ## Cómo se publica online (una vez)
 
-1. Sube los cambios a `master` (incluye el workflow `.github/workflows/mateventura-deploy.yml`).
+1. Sube los cambios a `main` (el repo incluye su propio workflow `.github/workflows/deploy.yml`).
 2. En GitHub → **Settings → Pages → Source: GitHub Actions**.
-3. Listo. URL: `https://cives.github.io/Antonio_Exocerebro/`. A partir de ahí se
-   actualiza sola en cada push que toque la carpeta.
+3. Listo. URL: `https://cives.github.io/mateventura/`. A partir de ahí se
+   actualiza sola en cada push a `main`.
 
 Alternativa sin nada de infraestructura: `MateVentura_PORTABLE.html` (un único
 archivo que se abre con doble clic, también con todo el contenido).
@@ -58,7 +58,7 @@ archivo que se abre con doble clic, también con todo el contenido).
 Pídele a Claude Code:
 
 > «Programa una rutina semanal (lunes 08:00) que ejecute
-> `20_PROYECTOS_REF/MateVentura/scripts/RUTINA_AUTOCOMPLETADO.md`.»
+> `scripts/RUTINA_AUTOCOMPLETADO.md`.»
 
 ## Comandos útiles
 
